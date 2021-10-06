@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>Arth</title>
+ 
+<script>
+	
+ //Cria o histórico dos cálculos
+function salva(string){ 
+	document.all.fita.value+=string;
+}
+
+//Função calcular, e tratamento de algumas iregularidades
+function calcular(cd){ 
+	cd=cd.replace("* *","**"); //tratando erro do espaço entre a potenciação
+	var result=eval(cd);
+	cd=cd.replace("^","**"); //tratando o operador lógico divergente
+	var result=eval(cd);
+	cd=cd.replace(",","."); //tratando o uso comum de ponto e virgula
+	var result=eval(cd);
+	cd=cd.replace(".",","); //tratando o uso comum de ponto e virgula
+	document.all.visor.value=cd;
+	document.all.cd.value=result;
+	var hist=" x = " + cd + " = " + result + " \n" + " x = " + result + " \n";
+	salva(hist);
+	foco();
+}
+
+ //Foca na linha de comando
+function foco(){ 
+	document.all.cd.focus;
+}
+ 
+ //Ajuda dos controles
+function ajuda(id){
+	var ajd=new Array();
+	ajd[0]="Digite a expressão a ser executada. Pressione ENTER para realizar o cálculo.";
+	ajd[1]="Aqui é exibida a última operação realizada na calculadora.";
+	ajd[2]="Historico de operacoes realizadas.";
+	alert(ajd[id]);
+}
+</script>
+</head>
+
+
+<body onLoad="foco()">
+
+<fieldset>
+
+<!-- Primeiro campo, de digitação -->
+<fieldset>
+<input id="cd" name="cd" type="text" size="50" onKeyPress="if ((window.event ? event.keyCode : event.which) == 13) { calcular(this.value); }">
+<legend id="lcd" onClick="ajuda('0')">Insira aqui a expressao aritmetica, e pressione enter.</legend>
+</fieldset>
+<br>
+<!-- Exibe a expressão calculada -->
+<fieldset>
+	<legend id="fvisor" onClick="ajuda('1')">Expressao calculada</legend>
+    <input name="visor" type="text" id="visor" size="50" readonly="true">
+    </fieldset>
+
+<br>
+<!-- Histórico e explorção da expressão -->
+    <textarea id="fita" name="fita" cols="40" rows="10" readonly></textarea>
+	<br><legend id="fvisor" onClick="ajuda('2')">Historico</legend><legend id="ffita" onClick="ajuda('0')">Histórico</legend>
+</fieldset>	
+
+</body>
+</html>
