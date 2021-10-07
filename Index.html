@@ -48,19 +48,19 @@ function ajuda(id){
 
 <!-- Primeiro campo, de digitação -->
 <fieldset>
-<input id="cd" name="cd" type="text" size="50" onKeyPress="if ((window.event ? event.keyCode : event.which) == 13) { calcular(this.value); }">
+<input id="cd" name="cd" type="text" size="40" onKeyPress="if ((window.event ? event.keyCode : event.which) == 13) { calcular(this.value); }">
 <legend id="lcd" onClick="ajuda('0')">Insira aqui a expressao aritmetica, e pressione enter.</legend>
 </fieldset>
 <br>
 <!-- Exibe a expressão calculada -->
 <fieldset>
 	<legend id="fvisor" onClick="ajuda('1')">Expressao calculada</legend>
-    <input name="visor" type="text" id="visor" size="50" readonly="true">
+    <input name="visor" type="text" id="visor" size="40" readonly="true">
     </fieldset>
 
 <br>
 <!-- Histórico e explorção da expressão -->
-    <textarea id="fita" name="fita" cols="40" rows="10" readonly></textarea>
+    <textarea id="fita" name="fita" cols="40" rows="15" readonly></textarea>
 	<br><legend id="fvisor" onClick="ajuda('2')">Historico</legend><legend id="ffita" onClick="ajuda('0')">Histórico</legend>
 </fieldset>	
 
