@@ -1,0 +1,16 @@
+Dia 5, Primeiras horas: verifiquei as solicitações, e comparei com outros projetos de calculadoras,
+verifiquei os requisitos do que foi pedido, e também busquei um benchmarking pela internet.
+encontrei 3 projetos similares aos quais poderia me orientar e comparar para fazer o código.
+Então comecei a contabilizar as situações aos quais poderia me deparar durante a execução, e
+com isto em mãos, comecei a desenvolver.
+dia 6: Desenvolvi toda a parte lógica, que faz os calculos que captura compara e interpreta
+as entradas do usuário, também fiz as expressões orientadas, já que não podemos usar a biblioteca
+math, já chegando no final da parte lógica, quando começo a validar os processos, me deparo com um
+primeiro problema: o caracter "^" seria um xor ou um simbolo para potência? como não sou adivinha,
+liguei e perguntei, outro problema também é que foi requisitado também o caracter "* *" também para
+potência, ok, depois de pensar um pouco, e testar duas alternativas apenas fiz o script reconhecer
+e interpretar as entradas.
+dia 7: estive no hospital logo cedo, e tive aula pela manhã até as 12, então não consegui acessar
+meu computador antes das 13 horas  ( depois de estudar e comer) deveria uma validação melhor de erros
+da parte do usuario, mas caso ele não digite algum caractere corretamente, como por exemplo " ( " sem
+fechar os parentes, a pagina apenas não irá calcular, como já estou passado da hora, enviei o projeto.
